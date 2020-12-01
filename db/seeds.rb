@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'json'
 
+puts "Destroying seeds"
+City.destroy_all
+
 file = File.open('/Users/chrisclark/Flatiron/code/Mod3/project/weather-app-backend/db/city.list.json')
 
 cities = JSON.parse(file.read)
