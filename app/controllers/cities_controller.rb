@@ -10,6 +10,7 @@ class CitiesController < ApplicationController
 
   # GET /cities/1
   def show
+    
     render json: @city
   end
 
@@ -36,6 +37,11 @@ class CitiesController < ApplicationController
   # DELETE /cities/1
   def destroy
     @city.destroy
+  end
+
+  def search
+    @city = City.where(name: params[:name])
+    render json: @city
   end
 
   private
