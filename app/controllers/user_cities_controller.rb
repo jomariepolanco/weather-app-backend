@@ -1,5 +1,5 @@
 class UserCitiesController < ApplicationController
-  before_action :set_user_city, only: [:show, :update, :destroy]
+  before_action :set_user_city, only: [:show, :update]
 
   # GET /user_cities
   def index
@@ -35,7 +35,9 @@ class UserCitiesController < ApplicationController
 
   # DELETE /user_cities/1
   def destroy
-    @user_city.destroy
+    data = params[:data].split(',')
+    @user_city = UserCity.find_by(user_id: data[0], city_id: data[1])
+    @user_city.destroy()
   end
 
   private
