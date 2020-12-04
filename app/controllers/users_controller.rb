@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
+    # byebug
     if @user.update(user_params)
       render json: @user
     else
@@ -46,6 +47,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :username, :phone_number)
+      params.require(:user).permit(:name, :username, :phone_number, :home_city)
     end
 end
