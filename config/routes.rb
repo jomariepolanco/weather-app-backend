@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :cities
+  resources :cities, only: [:index, :show]
   resources :user_cities, except: [:destroy]
-  resources :users
+  resources :users, except: [:destroy]
 
   get '/search/:name', to: 'cities#search'
   delete '/remove/:data', to: 'user_cities#destroy'
