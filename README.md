@@ -1,24 +1,11 @@
-# README
+# Weather App Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend half of a weather app where users have access to over 200000+ cities' weather in real time.
 
-Things you may want to cover:
+Users are able to login and save cities to their profile for easy access.
 
-* Ruby version
+Used a Rails API and Open Weather Data API
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Contributors:
+  - Jomarie Polanco
+  - Chris Clark
